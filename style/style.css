@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: #000000ee;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.switcher {
+    background: #5e5c5c;
+    width: 70px;
+    height: 28.6px;
+    border-radius: 15px;
+    border: 3px solid #f000ff;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.switcher .circle {
+    display: block;
+    width: 36%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    transition: 0.4s;
+    opacity: 1;
+}
+
+.switcher .circle:hover {
+    opacity: 0.7;
+}
+
+.title {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+.mainDiv {
+    width: 20%;
+    height: 55vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1%;
+}
+
+.mainDiv span {
+    color: #ffffff;
+    background: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s linear;
+}
+
+.mainDiv span:nth-of-type(1) {
+    background: #f82929;
+}
+
+.mainDiv .math {
+    background: #ffae00;
+}
+
+.mainDiv span:hover {
+    opacity: 0.8;
+}
+
+.mainDiv input {
+    grid-column: 1/4;
+    border-radius: 5px;
+    background: #2e2e2e;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    transition: 0.3s linear;
+}
+
+.wrapper.switched {
+    background: #1be7dc;
+}
+
+.mainDiv input.switched {
+    background: #ffffff;
+    color: #2e2e2e;
+}
+
+.mainDiv span.switched {
+    background: #ffffff;
+    color: #2e2e2e;
+}
+
+.mainDiv span:nth-of-type(1).switched {
+    background: #fd0c0cef;
+    color: #ffffff;
+}
+
+.mainDiv .math.switched {
+    background: #ffae00ee;
+}
+
+.circle.switched {
+    transform: translateX(177%);
+}
+
+.switcher.switched {
+    background: #0400ff31;
+    width: 70px;
+    height: 28.6px;
+    border-radius: 15px;
+    border: 3px solid #0400ff36;
+    cursor: pointer;
+}
